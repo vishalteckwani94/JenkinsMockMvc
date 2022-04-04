@@ -13,6 +13,10 @@ stage('Package') {
  bat 'mvn clean package'
  }
 }
+  stage('sonar analysis') {
+  steps {
+  jacoco()
+  }
 stage('JaCoCo Report') {
   steps {
   jacoco()
