@@ -27,11 +27,13 @@ stage('JaCoCo Report') {
 }
   stage('Build Docker Image'){
    steps{
+    echo 'Building Docker image'
    }
   }
   
   stage('Build Docker Image to Docker Hub '){
    steps{
+    echo 'Pushing Docker image'
    }
   }
 }
