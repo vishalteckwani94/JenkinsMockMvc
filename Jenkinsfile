@@ -25,5 +25,14 @@ stage('JaCoCo Report') {
   jacoco()
   }
 }
+  stage('Build Docker Image'){
+   steps{
+   }
+  }
+  
+  stage('Build Docker Image to Docker Hub '){
+   steps{
+   }
+  }
 }
 }
