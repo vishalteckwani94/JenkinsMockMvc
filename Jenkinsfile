@@ -15,7 +15,9 @@ stage('Package') {
 }
   stage('sonar analysis') {
   steps {
-  jacoco()
+   withSonarQubeEnv('ZensarCodeAnalysis'){
+    bat 'mvn sonar:sonar'
+   }
   }
 stage('JaCoCo Report') {
   steps {
